@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 
 import { SharedElement, TranslateYAndOpacity } from 'react-native-motion';
+import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
+
 
 import data from '../../data/data';
 import { ListItem, Row } from '../../components';
@@ -47,6 +49,7 @@ class Detail extends PureComponent {
 
     return (
       <TranslateYAndOpacity isHidden={phase !== 'phase-2'} delay={56 * delay}>
+
         <View style={styles.itemContainer}>
           <Row style={styles.rowContainer}>
             <View style={styles.titleContainer}>
@@ -102,13 +105,35 @@ class Detail extends PureComponent {
             />
           </View>
         </SharedElement>
-        <FlatList
-          data={items}
-          dataExtra={phase}
-          keyExtractor={item => item.amount}
-          renderItem={this.renderItem}
-        />
-        <BottomBar isHidden={phase === 'phase-3'} />
+        <Container>
+          <Header hasTabs />
+          <Tabs renderTabBar={() => <ScrollableTab />}>
+            <Tab heading="Tab1">
+              <FlatList
+                data={items}
+                dataExtra={phase}
+                keyExtractor={item => item.amount}
+                renderItem={this.renderItem}
+              />
+            </Tab>
+            <Tab heading="Tab2">
+
+            </Tab>
+            <Tab heading="Tab3">
+
+            </Tab>
+            <Tab heading="Tab4">
+
+            </Tab>
+            <Tab heading="Tab5">
+
+            </Tab>
+          </Tabs>
+        </Container>
+
+       
+
+        {/* <BottomBar isHidden={phase === 'phase-3'} /> */}
       </View>
     );
   }
