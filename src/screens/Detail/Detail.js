@@ -11,6 +11,7 @@ import {
 
 import { SharedElement, TranslateYAndOpacity } from 'react-native-motion';
 import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
+import PureChart from 'react-native-pure-chart';
 
 
 import data from '../../data/data';
@@ -79,10 +80,37 @@ class Detail extends PureComponent {
     if (!selectedItem) {
       return null;
     }
+    //let sampleData = [30, 200, 170, 250, 10];
+    let sampleData = [
+      {
+        seriesName: 'series1',
+        data: [
+          {x: '2018-02-01', y: 30},
+          {x: '2018-02-02', y: 200},
+          {x: '2018-02-03', y: 170},
+          {x: '2018-02-04', y: 250},
+          {x: '2018-02-05', y: 10}
+        ],
+        color: '#297AB1'
+      },
+      {
+        seriesName: 'series2',
+        data: [
+          {x: '2018-02-01', y: 20},
+          {x: '2018-02-02', y: 100},
+          {x: '2018-02-03', y: 140},
+          {x: '2018-02-04', y: 550},
+          {x: '2018-02-05', y: 40}
+        ],
+        color: 'yellow'
+      }
+    ];
 
     return (
       <View style={styles.container}>
         <Toolbar isHidden={phase === 'phase-3'} onBackPress={onBackPress} />
+
+
         <SharedElement
           ref={node => (this.sharedElementRef = node)}
           sourceId={selectedItem.name}
@@ -91,6 +119,7 @@ class Detail extends PureComponent {
           onMoveToSourceWillStart={this.onMoveToSourceWillStart}
           onMoveToSourceDidFinish={onSharedElementMovedToSource}
         >
+
           <View
             style={{
               opacity: opacityOfDestinationItem,
@@ -103,8 +132,12 @@ class Detail extends PureComponent {
               animateOnDidMount={false}
               isHidden={false}
             />
+            <PureChart data={sampleData} type='bar' width={'100%'} height={100} />
           </View>
+
+    
         </SharedElement>
+
         <Container>
           <Header hasTabs />
           <Tabs renderTabBar={() => <ScrollableTab />}>
@@ -118,16 +151,12 @@ class Detail extends PureComponent {
             </Tab>
             <Tab heading="Tab2">
 
+
             </Tab>
             <Tab heading="Tab3">
 
             </Tab>
-            <Tab heading="Tab4">
 
-            </Tab>
-            <Tab heading="Tab5">
-
-            </Tab>
           </Tabs>
         </Container>
 
