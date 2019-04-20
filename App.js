@@ -5,6 +5,8 @@ import { SharedElementRenderer } from 'react-native-motion';
 import List from './src/screens/List/List';
 import Detail from './src/screens/Detail/Detail';
 import BubbleChart from './src/components/BubbleChart';
+import Sliding from './src/components/Sliding';
+import Main from './src/components/Main';
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
@@ -70,6 +72,7 @@ import { Container, Content, Footer, FooterTab, Button, Icon, Text } from 'nativ
           selectedItem={selectedItem}
           onItemPress={this.onItemPressed}
           phase={phase}
+          navigation = {this.props.navigation}  
         />
         <Detail
           phase={phase}
@@ -111,20 +114,20 @@ import { Container, Content, Footer, FooterTab, Button, Icon, Text } from 'nativ
         <Footer >
           <FooterTab>
             <Button onPress={() => this.props.navigation.navigate("BubbleChart")}>
-                <Text> Apps </Text> 
-                      <Icon name='ios-apps-outline' />
+              <Text> Apps </Text>
+              <Icon name='ios-apps-outline' />
+            </Button>
+            <Button onPress={() => this.props.navigation.navigate("Sliding")}>
+
+              <Icon name='ios-camera-outline' />
+            </Button>
+            <Button active onPress={() => this.props.navigation.navigate("Main")}>
+
+              <Icon name='ios-compass' />
             </Button>
             <Button>
-              
-                      <Icon name='ios-camera-outline' />
-            </Button>
-            <Button active>
-              
-                      <Icon name='ios-compass' />
-            </Button>
-            <Button>
-              
-                      <Icon name='ios-contact-outline' />
+
+              <Icon name='ios-contact-outline' />
             </Button>
           </FooterTab>
         </Footer>
@@ -149,6 +152,12 @@ const AppNavigator = createStackNavigator({
   },
   BubbleChart: {
     screen: BubbleChart
+  },
+  Sliding: {
+    screen: Sliding
+  },
+  Main: {
+    screen: Main
   }
 });
 

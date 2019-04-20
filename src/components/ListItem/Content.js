@@ -6,23 +6,25 @@ import { getPlatformElevation } from '../../utils';
 
 class Content extends PureComponent {
   render() {
-    const { amount, date, isReceived } = this.props;
+    const { keystrokes, date, isReceived, application } = this.props;
 
     return (
+
       <Row style={styles.container}>
         <View style={styles.cellContainer}>
-          <Text style={styles.titleText}>Amount</Text>
-          <Text style={styles.amountText}>{amount}</Text>
+          <Text style={styles.titleText}>KEYSTROKES </Text>
+          <Text style={styles.keystrokesText}>{keystrokes}</Text>
         </View>
         <View style={styles.cellContainer}>
           <Text style={styles.titleText}>Date</Text>
           <Text>{date.format('LL')}</Text>
         </View>
         <View style={styles.cellContainer}>
-          <Text style={styles.titleText}>Status</Text>
-          <Text>{isReceived ? 'Received' : 'Not received'}</Text>
+          <Text style={styles.titleText}>APPLICATIONS</Text>
+          <Text>{application}</Text>
         </View>
       </Row>
+      
     );
   }
 }
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: 'gray',
   },
-  amountText: {
+  keystrokestText: {
     fontSize: 18,
     fontWeight: '900',
   },

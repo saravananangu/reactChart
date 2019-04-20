@@ -2,11 +2,13 @@ import React, { PureComponent } from 'react';
 import { Text, View, FlatList, StyleSheet, Easing } from 'react-native';
 
 import { SharedElement } from 'react-native-motion';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Toolbar from './Toolbar';
 import BottomBar from './BottomBar';
 import { ListItem } from '../../components';
 import data from '../../data/data';
+import Swipeout from 'react-native-swipeout';
 
 class List extends PureComponent {
   constructor(props) {
@@ -40,12 +42,22 @@ class List extends PureComponent {
   };
   renderItem = ({ item }) => {
     const { opacityOfSelectedItem } = this.state;
-    const { selectedItem } = this.props;
+    const { selectedItem, navigation } = this.props;
 
     const isHidden = selectedItem && selectedItem.name !== item.name;
     const isSelected = selectedItem && selectedItem.name === item.name;
     const id = item.name;
-
+    var swipeoutBtns = [
+      {
+        text: 'View',
+        color: '#fff',
+        backgroundColor: '#145A80',
+        onPress: function() {
+          navigation.navigate("Sliding");
+        }
+      }
+    ];
+    
     return (
       <SharedElement
         easing={Easing.in(Easing.back())}
@@ -62,11 +74,17 @@ class List extends PureComponent {
             backgroundColor: 'transparent',
           }}
         >
-          <ListItem
-            item={item}
-            onPress={this.onListItemPressed}
-            isHidden={isHidden}
-          />
+          <Swipeout right={swipeoutBtns}>
+              <ListItem
+                item={item}
+                onPress={this.onListItemPressed}
+                isHidden={isHidden}
+              /> 
+          </Swipeout>
+
+
+       
+
         </View>
       </SharedElement>
     );

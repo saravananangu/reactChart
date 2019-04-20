@@ -138,7 +138,7 @@ class Detail extends PureComponent {
     
         </SharedElement>
 
-        <Container>
+        {/* <Container>
           <Header hasTabs />
           <Tabs renderTabBar={() => <ScrollableTab />}>
             <Tab heading="Tab1">
@@ -158,7 +158,7 @@ class Detail extends PureComponent {
             </Tab>
 
           </Tabs>
-        </Container>
+        </Container> */}
 
        
 
