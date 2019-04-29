@@ -14,8 +14,8 @@ class Avatar extends PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    width: 48,
-    height: 48,
+    width: 50,
+    height: 50,
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',

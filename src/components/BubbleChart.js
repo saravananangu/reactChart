@@ -1192,6 +1192,7 @@ class BubbleChart extends React.Component {
                     scrollEnabled={false}
                     automaticallyAdjustContentInsets={true}
                 />
+                
             </View>
         )
     }

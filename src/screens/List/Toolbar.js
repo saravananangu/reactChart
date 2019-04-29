@@ -11,6 +11,7 @@ import { MaterialCommunityIcons, Ionicons, Feather } from '@expo/vector-icons';
 import { Row } from '../../components';
 import translateAndOpacity from '../../animations/translateAndOpacity';
 
+
 class Toolbar extends PureComponent {
   renderDetail() {
     const { opacityValue, translateY } = this.state;
@@ -18,7 +19,7 @@ class Toolbar extends PureComponent {
 
     return (
       <View style={styles.container}>
-        <View style={styles.statusBar} />
+        {/* <View style={styles.statusBar} /> */}
         <TouchableWithoutFeedback onPress={onBackPress}>
           <Animated.View style={animationStyle}>
             <Row style={styles.toolbarContainer}>
@@ -38,12 +39,11 @@ class Toolbar extends PureComponent {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.statusBar} />
         <View>
           <Row style={styles.toolbarContainer}>
-            <View style={styles.titleContainer}>
+            {/* <View style={styles.titleContainer}>
               <Text style={styles.titleText}>MOST ACTIVE USERS</Text>
-            </View>
+            </View> */}
             <View style={styles.menuIconContainer}>
               <Ionicons name="md-menu" size={24} color="#008dff" />
             </View>

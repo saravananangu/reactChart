@@ -71,7 +71,7 @@ class List extends PureComponent {
         <View
           style={{
             opacity: opacityOfSelectedItem,
-            backgroundColor: 'transparent',
+            backgroundColor: '0000',
           }}
         >
           <Swipeout right={swipeoutBtns}>

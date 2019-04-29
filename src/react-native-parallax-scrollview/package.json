@@ -1,0 +1,66 @@
+{
+  "_from": "react-native-parallax-scrollview",
+  "_id": "react-native-parallax-scrollview@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-NCw4s6OO2blrvUFnWQHlHEnAzZSik2n6yR2Oyy7QCheih+8U19hwYY/utr4dn1gDVlkBA2FAEy993RMpyo6c2A==",
+  "_location": "/react-native-parallax-scrollview",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-parallax-scrollview",
+    "name": "react-native-parallax-scrollview",
+    "escapedName": "react-native-parallax-scrollview",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-parallax-scrollview/-/react-native-parallax-scrollview-3.0.0.tgz",
+  "_shasum": "43ad2aeb45b8e4eca3076ce550419871b131bb20",
+  "_spec": "react-native-parallax-scrollview",
+  "_where": "/Users/angu/angappan/technovation2019/reactChart",
+  "author": {
+    "name": "Monte Thakkar"
+  },
+  "bugs": {
+    "url": "https://github.com/Monte9/react-native-scroll-view/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The Parallax ScrollView component we all deserve",
+  "devDependencies": {
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
+    "react-native-elements": "^0.19.0"
+  },
+  "homepage": "https://github.com/Monte9/eact-native-scroll-view#readme",
+  "keywords": [
+    "react-native",
+    "reactjs",
+    "reactnative",
+    "gestures",
+    "scrollview",
+    "ios",
+    "android",
+    "parallax",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "main": "./src/ParallaxScrollView",
+  "name": "react-native-parallax-scrollview",
+  "peerDependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Monte9/react-native-scroll-view.git"
+  },
+  "scripts": {
+    "lint": "eslint src/"
+  },
+  "version": "3.0.0"
+}

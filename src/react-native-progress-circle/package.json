@@ -1,0 +1,70 @@
+{
+  "_from": "react-native-progress-circle",
+  "_id": "react-native-progress-circle@2.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Cb2bBJ+m4DIcUnv7zaRvhMuaZAb1cWrd0UUMFJz/F7Z5yMga3A7SrQGDhtUrcpBju4peyqtUMoQG8dOFEuCVog==",
+  "_location": "/react-native-progress-circle",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-progress-circle",
+    "name": "react-native-progress-circle",
+    "escapedName": "react-native-progress-circle",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-progress-circle/-/react-native-progress-circle-2.0.1.tgz",
+  "_shasum": "6a034bef69a13c3b7f1a33722527046d088c233d",
+  "_spec": "react-native-progress-circle",
+  "_where": "/Users/angu/angappan/technovation2019/reactChart",
+  "author": {
+    "name": "Christoph Michel"
+  },
+  "bugs": {
+    "url": "https://github.com/MrToph/react-native-progress-circle/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A light-weight progress circle indicator for React Native.",
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "react": "16.0.0-alpha.6",
+    "react-native": "0.44.0"
+  },
+  "homepage": "https://github.com/MrToph/react-native-progress-circle#readme",
+  "keywords": [
+    "react",
+    "react native",
+    "percentage",
+    "circle",
+    "progress",
+    "indicator"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "react-native-progress-circle",
+  "peerDependencies": {
+    "react-native": "*",
+    "react": "*",
+    "prop-types": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrToph/react-native-progress-circle.git"
+  },
+  "scripts": {},
+  "version": "2.0.1"
+}
